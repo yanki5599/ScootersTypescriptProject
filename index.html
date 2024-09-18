@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="headerTitle">
+        <h1 id="headerTitle">scooter manager</h1>
+      </div>
+    </header>
+    <main id="MainPage">
+      <section class="flexCenter">
+        <form id="addScooterForm">
+          <input
+            type="text"
+            name="serialNumber"
+            placeholder="serial number"
+            required
+          />
+          <input type="text" name="model" placeholder="Model" required />
+          <input
+            min="0"
+            max="100"
+            type="number"
+            name="batteryLevel"
+            placeholder="Battery level"
+            required
+          />
+          <input type="text" name="imageUrl" placeholder="image Url" required />
+          <input
+            type="color"
+            name="color"
+            placeholder="color: (ex #3a9f3c)"
+            required
+          />
+
+          <select class="mrl-1" name="status" required>
+            <option value="available">available</option>
+            <option value="inRepair">inRepair</option>
+            <option value="unavailable">unavailable</option>
+          </select>
+          <button class="mrl-1" type="submit">Add Scooter</button>
+        </form>
+      </section>
+      <section>
+        <div class="headerTitle">
+          <h1>list of all scooters</h1>
+        </div>
+        <table id="scootersTable">
+          <thead>
+            <tr>
+              <th class="tooltip">
+                <input type="search" placeholder="filter..." id="" />
+                <h2>SERIAL NUMBER</h2>
+                <span class="tooltiptext"
+                  >Click to sort<br />Type to filter</span
+                >
+              </th>
+              <th class="tooltip">
+                <input type="search" placeholder="" id="" />
+                <h2>MODEL</h2>
+                <span class="tooltiptext"
+                  >Click to sort<br />Type to filter</span
+                >
+              </th>
+              <th class="tooltip">
+                <input type="search" placeholder="" id="" />
+                <h2>BATTERY LVL</h2>
+                <span class="tooltiptext"
+                  >Click to sort<br />Type to filter</span
+                >
+              </th>
+              <th class="tooltip">
+                <input type="search" placeholder="" id="" />
+                <h2>IMAGE</h2>
+                <span class="tooltiptext"
+                  >Click to sort<br />Type to filter</span
+                >
+              </th>
+              <th class="tooltip">
+                <input type="search" placeholder="" id="" />
+                <h2>COLOR</h2>
+                <span class="tooltiptext"
+                  >Click to sort<br />Type to filter</span
+                >
+              </th>
+              <th class="tooltip">
+                <input type="search" placeholder="" id="" />
+                <h2>STATUS</h2>
+                <span class="tooltiptext"
+                  >Click to sort<br />Type to filter</span
+                >
+              </th>
+              <th><h2>ACTIONS</h2></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+    </main>
+    <main id="EditPage">
+      <section class="flexCenter">
+        <form id="editScooterForm">
+          <input
+            type="text"
+            name="serialNumber"
+            placeholder="serial number"
+            required
+          />
+          <input type="text" name="model" placeholder="Model" required />
+          <input
+            min="0"
+            max="100"
+            type="number"
+            name="batteryLevel"
+            placeholder="Battery level"
+            required
+          />
+          <input type="text" name="imageUrl" placeholder="image Url" required />
+          <input
+            type="color"
+            name="color"
+            placeholder="color: (ex #3a9f3c)"
+            required
+          />
+
+          <select class="mrl-1" name="status" required>
+            <option value="available">available</option>
+            <option value="inRepair">inRepair</option>
+            <option value="unavailable">unavailable</option>
+          </select>
+          <button class="mrl-1" type="submit">Save Changes</button>
+          <button id="cancelEditBtn" class="mrl-1">cancel</button>
+        </form>
+      </section>
+    </main>
+    <footer></footer>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
